@@ -1,11 +1,15 @@
 import React from "react";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+import { useGif } from "../hooks/useGif";
 
 export const RandomGif = () => {
+  const { gif, fetchGif } = useGif();
+
   return (
-    <>
-      <h1>Random Gif</h1>
-    </>
+    <div className="container">
+      <h1>Random GIF</h1>
+      <img width="500" src={gif} alt="Random Gif" />
+      <button onClick={() => fetchGif()}>New GIF</button>
+    </div>
   );
 };
