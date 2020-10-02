@@ -8,7 +8,7 @@ import "./App.css";
 const App = () => {
   return (
     <div>
-      <h1>Random GIF Generator</h1>
+      <h1 className="rainbow rainbow_text_animated">Random GIF Generator</h1>
       <div className="main-container">
         <RandomGif />
         <GifByTag />

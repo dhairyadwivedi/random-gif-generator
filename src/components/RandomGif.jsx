@@ -9,7 +9,9 @@ export const RandomGif = () => {
     <div className="container">
       <h1>Random GIF</h1>
       <img width="500" src={gif} alt="Random Gif" />
-      <button onClick={() => fetchGif()}>New GIF</button>
+      <button onClick={() => fetchGif()}>
+        <span>New GIF</span>
+      </button>
     </div>
   );
 };

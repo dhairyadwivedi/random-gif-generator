@@ -10,15 +10,18 @@ export const GifByTag = () => {
   return (
     <div className="container">
       <h1>Random {tag} GIF</h1>
-      <img width="500" src={gif} alt="Random Gif" />
-      <input
-        type="text"
-        onChange={(e) => {
-          setTag(e.target.value);
-        }}
-        value={tag}
-      />
-      <button onClick={() => fetchGif(tag)}>New GIF</button>
+      <img src={gif} alt="Random Gif" />
+      <div class="tag-input">
+        <input
+          type="text"
+          onChange={(e) => {
+            setTag(e.target.value);
+          }}
+          value={tag}
+          placeholder="Type the tag name..."
+        />
+        <button onClick={() => fetchGif(tag)}><span>New GIF</span></button>
+      </div>
     </div>
   );
 };
